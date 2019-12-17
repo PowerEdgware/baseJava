@@ -1,0 +1,10 @@
+ syntax = "proto3";
+ package protobuf.map;
+ 
+ option optimize_for=SPEED;
+ 
+ message MessageReq{
+ 	string reqId = 1;//
+	int32 ID = 2;
+ 	map <string,string> paramMap = 3;//
+ }

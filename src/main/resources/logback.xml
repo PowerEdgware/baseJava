@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<appender name="logfile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>base_java.log</File>
+		<encoder>
+			<pattern>%d: %p %C:%M:%L - %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<maxIndex>20</maxIndex>
+			<FileNamePattern>base_java.log.%i</FileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>50MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d:[%thread] %p %C:%M:%L - %m%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="org.apache" level="WARN" />
+	<logger name="net.sf.ehcache" level="WARN" />
+	<logger name="io.netty" level="WARN" />
+	<logger name="org.springframework" level="WARN" />
+	<logger name="org.hibernate" level="WARN" />
+	<logger name="com.mchange" level="WARN" />
+	<logger name="org.quartz" level="WARN" />
+	<logger name="net.unitedcloud.chang.util" level="WARN" />
+	<logger name="net.unitedcloud.chang.netty.framework" level="WARN" />
+	<root level="DEBUG">
+		<appender-ref ref="logfile" />
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>

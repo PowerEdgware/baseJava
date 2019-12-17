@@ -1,0 +1,11 @@
+ syntax = "proto3";
+ package protobuf.demoV2;
+ 
+ option optimize_for=SPEED;
+ 
+ message DemoReqV2{
+ 	sint32 acctID = 2;//账号id
+ 	string name = 3;//Required fields are not allowed in proto3.
+ 	bool suc = 4;// 'optional' labels are disallowed in the Proto3 syntax.as fields are 'optional' by default.
+	string email = 1;
+ }

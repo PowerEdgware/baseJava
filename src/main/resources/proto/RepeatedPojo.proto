@@ -1,0 +1,14 @@
+ syntax = "proto3";
+ package protobuf.repeatedPojo;
+ 
+ option optimize_for=SPEED;
+ 
+ message PojoMap{
+	string reqId = 1;
+	repeated MapFieldEntry paramPojo = 2;
+ }
+ 
+ message MapFieldEntry {
+  string key = 1;
+  string value = 2;
+ }
