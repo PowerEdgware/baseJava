@@ -7,6 +7,7 @@
 	<properties>
 		<logback.version>1.1.8</logback.version>
 		<org.slf4j.version>1.7.12</org.slf4j.version>
+		<guava.version>28.2-jre</guava.version>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -87,6 +88,17 @@
     <version>3.4.6</version>
 </dependency>
 
+<dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>${guava.version}</version>
+	</dependency>
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.10</version>
+    <scope>provided</scope>
+</dependency>
 	</dependencies>
 
 </project>
