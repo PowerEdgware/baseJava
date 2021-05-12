@@ -70,7 +70,7 @@
 <dependency>
     <groupId>org.apache.tika</groupId>
     <artifactId>tika</artifactId>
-    <version>1.16</version>
+    <version>1.25</version>
     <type>pom</type>
 </dependency>
  
